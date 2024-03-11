@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Javascript</title>
+
+    <!-- Ekternal CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <nav>
+            <img src="/assets/img/logo.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 id="up"> Materi Javascript </h1>
+
+    <div class="pendahuluan">
+        <p> Javascript merupakan bahasa pemrograman yang dikembangkan unutk membuah sebuah website agar lebih interaktif dan dinamis.
+            Javascript sendiri merupakan bahasa pemrograman interpreter sehingga tidak memerlukan proses compiling untuk menjalankan. 
+            Bahasa javascript memiliki fitur seperti object-oriented, client-side, pemrograman level tinggi dan loosy typed.
+        </p><br>
+
+        <p>
+            Untuk menjalankan javascript terdapat 2 cara yaitu, menjalankan langsung melalui console browser dan menjalankan lewat file yang di muat pada sebuah halaman web.
+        </p><br>
+
+        <p>
+            Secara umum struktur kode javascript atau yang bis akita sebut dengan script terditri tiga bagian yaitu :
+            <ol>
+                <li> <b>Statement</b> <br> Sebuah statement bisa kita sebut sebagai kalimat tapi dalam kode. Statement adalah semua syntax dan perintah-perintah yang menjalankan aksi.</li>
+                <li> <b>Semi colon (;) </b> <br> Pada javascript titik koma tidak menjadi sebuah kewajiban jika antara statement satu dengan lainnya dipishakan dengan baris baru. Namun jika setiap statement ditulis dalam satu baris maka wajib diakhiri dengan titik koma. </li>
+                <li> <b>Komentar</b> <br> Semua statement yang dibungkus dengan komentar tidak akan dijalankan. Penulisan komentar dalam javascript ada dua, yakni :
+                    <ul>
+                        <li>Komentar satu baris. Sebuah komnetar satu baris ditandai dengan menambahkan “//” di awal statement. </li>
+                        <li>Komentar multi baris. Komentar multi baris dibungkus dengan tanda “/*…..*/”.</li>
+                    </ul>
+                </li>
+            </ol>
+        </p><br>
+
+        <p>
+            Penjelasan di atas merupakan bagian pendahuluan sebelum kita mempelajari lebih dalam mengenai dasar JavaScript. Adapun materi yang akan kita pelajari pada modul ini sebagai berikut :
+            <div class="bab">
+                <ul>
+                    <li> <a href="#tipe_data">Tipe Data</a> </li>
+                    <li> <a href="#operator">Operator Logika</a> </li>
+                    <li> <a href="#control">Branching</a></li>
+                    <li> <a href="#looping">Looping</a> </li>
+                    <li> <a href="#pop_up">Pop Up Box</a> </li>
+                </ul>
+            </div>
+        </p>
+
+
+    </div>
+
+    <div class="materi" id="tipe_data">
+        <h2>Tipe Data</h2>
+        <p>
+            Data type atau tipe data dalam bahasa pemrograman adalah sebuah klasifikasi yang menentukan suatu tipe dari nilai. 
+            Tipe data ini juga menentukan operasi matematika, relasional maupun operasi logika apa saja yang dapat digunakan tanpa menyebabkan kesalahan kode. 
+            Dalam Javascript terdapat 8 jenis tipe data :
+        </p>
+        <br>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Number</h3>
+                <p>
+                    Tipe data number dalam Javascript digunakan untuk mempresentasikan integer (bilangan bulat) dan float (bilangan pecahan). <br>
+                    Ada beberapa operasi bilangan yang dapat digunakan seperti, perkalian “*”, pembagian “/”, penjumlahan “+”, penguranagn “-” dan sebaginya. <br>
+                </p>
+                <div class="uji">
+                    <input type="text" id="input_uji_number" placeholder="masukkan sesuatu...">
+                    <div class="hasil" id="hasil_uji_number"></div>
+                </div>
+                <br>
+                <p>Selain bilangan regular (integer dan float) terdapat juga nilai khusus yang masuk dalam tipe data number. Nilai khusus tersebut adalah 
+                    <ul>
+                        <li>
+                            Infinity | -Infinity <br>
+                            (representasi nilai tak berhingga) <br>
+                            Diperoleh dengan membagi bilangan apapun dengan angka 0 <br>
+                            <div class="hasil" id="hitung_infinity"></div>
+                        </li>
+                        <li>
+                            NaN <br>
+                            (representasi kesalahan perhitungan)
+                            <div class="hasil" id="hitung_NaN"></div>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3>BigInt</h3>
+                <p>
+                    Dalam Javascript tipe data number tidak bisa mempresentasikan bilangan bulat lebih dari (2^53-1) atau bernilai 9007199254740991 atau untuk bilangan negatif -(2^53-1). <br>
+                    Menggunakan fungsi bigInt ...
+                </p>
+                <button class="btn-coba" onclick="maksimum_bigInt()">Maximum Big Int</button>
+                <div class="hasil" id="hasil_bigInt"></div>
+                <br>
+                <p>
+                    Sebuah nilai yang bertipe BigInt selalu diakhiri dengan huruf n pada akhir sebuah nilai integer.
+                </p>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>String</h3>
+                <p>
+                    Penulisan tipe data string harus dibungkus dengan tanda petik. Dalam javascript terdapat tiga jenis tanda petik.
+                    <ul>
+                        <li> "Hello World" </li>
+                        <li> 'Hello World' </li>
+                        <li> `Hello World` </li>
+                    </ul>
+                    Tidak ada perbedaan antara penggunaan tanda petik ganda dan petik tunggal. <br>
+                    Namun, untuk tanda backtick (``) biasanya untuk menggabungkan variable dan ekspresi serta harus dibungkus dengan ${….}. <br>
+                    Contoh :
+                    <div class="code">
+                        const word = "Dunia" <br>
+                        const uji_string = document.getElementById("uji-string"); <br>
+                        uji_string.textContent = `Hello, ${word}`; <br>
+                    </div>
+                    Output : <div class="hasil" id="uji-string"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3>Boolean</h3>
+                <p>
+                    Bollean adalah tipe data berjenis logikal. Tipe data ini hanya memiliki dua nilai, true atau false. 
+                    True artinya benar dan false artinya salah. 
+                    Nilai tipe data Boolean dapat juga dihasilkan dari sebuah hasil perbandingan.<br><br>
+                    Contoh : membandingkan 2 angka
+                </p> <br>
+                <div class="uji-boolean">
+                    <input type="number" class="angka" id="angka1" placeholder="angka pertama" oninput="hitung_boolean()">
+                    <select id="operatorr" onchange="hitung_boolean()">
+                        <option value=">">lebih dari</option>
+                        <option value="<">kurang dari</option>
+                    </select>
+                    <input type="number" class="angka" id="angka2" placeholder="angka kedua" oninput="hitung_boolean()"><br>
+                    <div class="hasil" id="hasil_boolean"></div><br>
+                </div>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Null</h3>
+                <p>
+                    Null merupakan sebuah nilai khusus yang bukan milik tipe data apapun. 
+                    Pada javascript null bukan referensi untuk sebuah object yang tidak ada atau sebuah null-pointer seperti kebanyakan bahasa pemrograman lain. 
+                    Null hanya sebuah nilai khusus yang mempresentasikan nilai yang tidak ada isinya, kosong, atau nilai tidak diketahui. <br>
+                    Contoh : <br>
+                    <div class="code">
+                        const nilai = null; <br>
+                        const uji_null = document.getElementById("uji-null"); <br>
+                        uji_null.textContent = nilai;
+                    </div>
+                    <div class="hasil" id="uji-null"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3>Undefined</h3>
+                <p>
+                    Undefined merupakan nilai khusus yang mempresentasikan bahwa sebuah variable belum memiliki nilai yang di-assign terhadapnya. 
+                    Artinya sebuah variabel sudah di deklasrisakn sebelumnya namun belum memilki sebuah nilai yang kemudian kita akses atau lakukan operasi. <br>
+                    Contoh : <br>
+                    <div class="code">
+                        let nama; <br>
+                        const uji_undefined = document.getElementById("uji-undefined"); <br>
+                        uji_undefined.textContent = "Output : " + nama;
+                    </div>
+                    <div class="hasil" id="uji-undefined"></div>
+                </p>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Simbol</h3>
+                <p>
+                    Tipe data symbol digunakan untuk sesuatu yang bernilai unik dan tidak dapat diubah (immutable). <br>
+                    Contoh : <br>
+                    <div class="code">
+                        const prodi = Symbol('Teknik Informatika'); <br>
+                        document.getElementById("output-uji-symbol").textContent = prodi.toString(); <br>
+                        document.getElementById("uji-symbol").textContent = prodi.description.toString();
+                    </div><br>
+                    Output:
+                    <div class="hasil" id="output-uji-symbol"></div>
+                    <div class="hasil" id="uji-symbol"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3>Object</h3>
+                <p>
+                    Tipe data objek adalah tipe data khusus yang dapat menyimpan kumpulan nilai dengan kunci/ key.
+                    Sebuah objek dapat didefiniskan dengan menggunakan kurung kurawal “{…}” dengan property yang sifatnya opsional di dalamnya. 
+                    Sebuah property dalam objek adalah pasangan dari sebuah “key : value”. 
+                    Dimana “key” berupa string (key bisa juga disebut sebagai property name) dan “value” bisa bernilai apapun. 
+                    Untuk mengakses sebuah nilai dalam objek kita dapat menggunakan notasi “.” Dan diikuti key/ nama propertinya
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="materi" id="operator">
+        <h2>Operator</h2>
+        <p>
+            <b>Operator</b> adalah simbol yang digunakan untuk melakukan operasi pada sebuah operand. 
+            <b>Operand</b> sendiri adalah sebuah nilai atau variabel yang dilakukan operasi oleh operator.
+        </p>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3> Operator Aritmatika </h3>
+                <p> operator yang dapat digunakan unutk melakukan operasi aritmatika </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Operator</th>
+                            <th>Simbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Penjumlahan</td>
+                            <td>+</td>
+                        </tr>
+                        <tr>
+                            <td>Pengurangan</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Perkalian</td>
+                            <td>*</td>
+                        </tr>
+                        <tr>
+                            <td>Pemangkatan</td>
+                            <td>**</td>
+                        </tr>
+                        <tr>
+                            <td>Pembagian</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>Sisa Bagi</td>
+                            <td>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="uji-operasi">
+                    <input type="number" id="angka-1" placeholder="angka pertama">
+                    <input type="number" id="angka-2" placeholder="angka kedua">
+                    <button class="operator-hitung" onclick="operator_aritmatika()">hitung</button> <br>
+                    <div class="hasil-operator" id="hasil_aritmatika"></div>
+                </div>
+            </div>
+            <div class="sub-kolom">
+                <h3> Operator Penugasan </h3>
+                <p> operatir yang umumnya digunakan unutk mengisi nilai sebuah variabel. </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Operator</th>
+                            <th>Simbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pengisian Nilai</td>
+                            <td>=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Penambahan</td>
+                            <td>+=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Pengurangan</td>
+                            <td>-=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Perkalian</td>
+                            <td>*=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Pemangkatan</td>
+                            <td>**=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Pembagian</td>
+                            <td>/=</td>
+                        </tr>
+                        <tr>
+                            <td>Pengisian dan Sisa Bagi</td>
+                            <td>%=</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="uji-operasi">
+                    <input type="number" id="angka-3" placeholder="masukkan angka">
+                    <!-- <input type="number" id="angka-2" placeholder="angka kedua"> -->
+                    <button class="operator-hitung" onclick="operator_penugasan()">hitung</button> <br>
+                    <div class="hasil-operator" id="hasil_penugasan"></div>
+                </div>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3> Operator Perbandingan </h3>
+                <p>operator ini dapat digunakan unutk membandingkan dua nilai</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Operator</th>
+                            <th>Simbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lebih Besar</td>
+                            <td> > </td>
+                        </tr>
+                        <tr>
+                            <td>Lebih Kecil</td>
+                            <td> < </td>
+                        </tr>
+                        <tr>
+                            <td>Sama Dengan</td>
+                            <td> == atau === </td>
+                        </tr>
+                        <tr>
+                            <td>Tidak Sama Dengan</td>
+                            <td> != atau !== </td>
+                        </tr>
+                        <tr>
+                            <td>Lebih Besar Sama Dengan</td>
+                            <td> >= </td>
+                        </tr>
+                        <tr>
+                            <td>Lebih Kecil Sama Dengan</td>
+                            <td> <= </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="uji-operasi">
+                    <input type="number" id="perbandingan-1" placeholder="angka pertama">
+                    <input type="number" id="perbandingan-2" placeholder="angka kedua">
+                    <button class="operator-hitung" onclick="operator_perbandingan()">hitung</button>
+                    <br>
+                    <div class="hasil-operator" id="hasil_perbandingan"></div><br>
+                </div>
+            </div>
+            <div class="sub-kolom">
+                <h3> Operator Logika </h3>
+                <p> operator yang dapat digunakan unutuk operasi terhadap dua nilai boolean. </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Operator</th>
+                            <th>Simbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logika AND</td>
+                            <td>&&</td>
+                        </tr>
+                        <tr>
+                            <td>Logika OR</td>
+                            <td>||</td>
+                        </tr>
+                        <tr>
+                            <td>Negasi / Kebalikan</td>
+                            <td>!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="uji-operasi">
+                    <select id="logika-1">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                    <select id="logika-2">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                    <button class="operator-hitung" onclick="operator_logika()">hitung</button>
+                    <br>
+                    <div class="hasil-operator" id="hasil_logika"></div><br>
+                </div>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3> Operator Bitwise </h3>
+                <p>operator yang digunakan untuk operasi berdasarkan bit (biner).</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Operator</th>
+                            <th>Simbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AND</td>
+                            <td>&</td>
+                        </tr>
+                        <tr>
+                            <td>OR</td>
+                            <td>|</td>
+                        </tr>
+                        <tr>
+                            <td>XOR</td>
+                            <td>^</td>
+                        </tr>
+                        <tr>
+                            <td>Negasi / Kebalikan</td>
+                            <td>~</td>
+                        </tr>
+                        <tr>
+                            <td>Left Shift</td>
+                            <td><<</td>
+                        </tr>
+                        <tr>
+                            <td>Right Shift</td>
+                            <td>>></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="uji-operasi">
+                    <input type="number" id="bitwise-1" placeholder="bilangan biner pertama">
+                    <input type="number" id="bitwise-2" placeholder="bilangan biner kedua">
+                    <button class="operator-hitung" onclick="operator_bitwise()">hitung</button>
+                    <br>
+                    <div class="hasil-operator" id="hasil_bitwise"></div><br>
+                </div>
+            </div>
+            <div class="sub-kolom">
+                <h3> Operator Ternary </h3>
+                <p style="text-align: justify; text-indent: 25px;">
+                    Operator ternary merupakan operator yang terdiri dari tiga bagian (kiri, tangah dan kanan).
+                </p>
+                <p style="text-align: justify; text-indent: 25px;">
+                    Operator-operator sebelumnya disebut operator binary karena hanya memiliki 2 bagian saja.
+                    Sedangkan untuk operator yang hanya memiliki 1 bagian disebut operator unary. <br><br>
+                    Operator ternary digunakan untuk melakukan percabangan (if-else). Cara penggunaan :
+                    <div class="code">
+                        kondisi ? jika benar : jika salah
+                    </div> <br>
+                    Contoh :
+                    <div class="code">
+                        let a = 1; <br>
+                        let b = 1; <br>
+                        console.log( a == b ? "yes" : "no");
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="materi" id="control">
+        <h2>Conditional Branching</h2>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3> If - Else If - Else </h3>
+                <p> 
+                    <b>If</b>, digunakan untuk mengevaluasi suatu kondisi. Jika kondisi tersebut benar (true), maka blok kode di dalamnya akan dieksekusi. Jika tidak maka akan dilewati.
+                    <div class="code">
+                        if (kondisi) { <br>
+                            # Blok kode yang dieksekusi jika kondisi bernilai True <br>
+                        }
+                    </div> 
+                </p>
+                <p>
+                    <b>Else If</b>,  digunakan untuk menambahkan kondisi alternatif setelah if. 
+                    <div class="code">
+                        if (kondisi1) { <br>
+                            # Blok kode yang dieksekusi jika kondisi1 bernilai True <br>
+                        } else if (kondisi2) { <br>
+                            # Blok kode yang dieksekusi jika kondisi2 bernilai True <br>
+                        }
+                    </div>
+                </p>
+                <p>
+                    <b>Else</b>, digunakan sebagai bagian terakhir dari struktur pengkondisian. 
+                    <div class="code">
+                        if (kondisi1) { <br>
+                            # Blok kode yang dieksekusi jika kondisi1 bernilai True <br>
+                        } else if (kondisi2) { <br>
+                            # Blok kode yang dieksekusi jika kondisi2 bernilai True <br>
+                        } else { <br>
+                            # Blok kode yang dieksekusi jika tidak ada kondisi sebelumnya yang terpenuhi <br>
+                        }
+                    </div>
+                </p> <br>
+                <p>
+                    Contoh : <i>diketahui blok kode sebagai berikut</i>
+                    <div class="code">
+                        if (kondisi <= 100 && kondisi >= 90) { <br>
+                            Anda mendapat A <br>
+                        } else if (kondisi <= 89 && kondisi >=80) { <br>
+                            Anda mendapat B <br>
+                        } else if (kondisi <=79  && kondisi >=70) { <br>
+                            Anda mendapat C <br>
+                        } else { <br>
+                            Anda mendapat D <br>
+                        }
+                    </div>
+                    <div class="uji">
+                        <input type="number" id="kondisi" placeholder="masukkan angka" max="100" oninput="cek_kondisi()">
+                        <div class="hasil-operator" id="hasil_kondisi"></div>
+                    </div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3> Switch Statement </h3>
+                <p>
+                    Switch dapat digunakan untuk menggantikan if else yang memiliki banyak percabangan sehingga lebih deskriptif unutk membandingkan banyak variansi nilai.                
+                </p> <br>
+                <p>
+                    Struktur dari switch statement terdiri dari beberapa case (kasus) yang mewakili kemungkinan nilai variabel yang dapat diuji. 
+                    Ketika nilai variabel sesuai dengan salah satu case, blok kode yang sesuai dengan case tersebut akan dieksekusi. 
+                    Switch statement juga biasanya memiliki satu atau lebih case default yang dieksekusi jika tidak ada case yang sesuai dengan nilai variabel.                  
+                </p> <br>
+                <p>
+                    Penggunaan switch statement hanya cocok untuk kasus yang perlu memeriksa nilai variabel terhadap beberapa nilai diskrit. 
+                    Jika diperlukan evaluasi kondisi yang lebih kompleks atau dengan syarat-syarat yang rumit, maka penggunaan if-else statement akan lebih sesuai.
+                </p>
+                <br>
+                <p>
+                    Contoh : <i>diketahui blok kode sebagai berikut</i>
+                    <div class="code">
+                        switch (kondisi) { <br>
+                            case 10: <br>
+                            case 9: <br>
+                                hasil = "Sangat Baik"; <br>
+                                break; <br>
+                            case 8: <br>
+                            case 7: <br>
+                                hasil = "Baik"; <br>
+                                break; <br>
+                            case 6: <br>
+                            case 5: <br>
+                                hasil = "Cukup"; <br>
+                                break; <br>
+                            default: <br>
+                                hasil = "Kurang"; <br>
+                                break; <br>
+                        }
+                    </div>
+                    <div class="uji">
+                        <input type="number" id="switch_kondisi" placeholder="masukkan angka" max="100" oninput="cek_switch()">
+                        <div class="hasil-operator" id="hasil_switch"></div>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="materi" id="looping">
+        <h2>Looping</h2>
+        <p style="text-align: center;"> Loop atau perulangan adalah proses untuk menjalankan perintah secara berulangan.  </p>
+        <div class="kolom-2">
+            <div class="sub-kolom">
+                <h3> For Loop </h3>
+                <p>merupakan struktur pengulangan yang digunakan untuk mengeksekusi blok kode secara berulang berdasarkan kondisi yang ditentukan.</p> <br>
+                <p>For loop cocok digunakan ketika Anda sudah mengetahui berapa kali kode akan diulang.</p>
+                <p>
+                    Contoh :
+                    <div class="code">
+                        for (let i = 0; i < 5; i++) { <br>
+                            i <br>
+                        }                    
+                    </div>
+                    Output :
+                    <div class="hasil" id="hasil_forloop"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3> While Loop </h3>
+                <p> digunakan untuk mengeksekusi blok kode secara berulang selama kondisi yang ditentukan bernilai benar (true). </p> <br>
+                <p> Cocok digunakan ketika tidak tahu berapa kali kode akan diulang, namun akan berhenti saat kondisi tertentu. </p>
+                <p>
+                    Contoh :
+                    <div class="code">
+                        let j = 1; <br>
+                        while (j <= 5) { <br>
+                            j++
+                        }
+                    </div>
+                    Output :
+                    <div class="hasil" id="hasil_whileloop"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3> Do While </h3>
+                <p> hampir sama dengan while loop, namun blok kode akan dieksekusi setidaknya sekali sebelum kondisi diuji. </p> <br>
+                <p>Cocok digunakan untuk memastikan bahwa blok kode di dalamnya dieksekusi setidaknya sekali, bahkan jika kondisi awalnya tidak memenuhi.</p>
+                <p>
+                    Contoh :
+                    <div class="code">
+                        let k = 1;
+                        do { <br>
+                            k++; <br>
+                        } while (k = 5);                   
+                    </div>
+                    Output :
+                    <div class="hasil" id="hasil_dowhile"></div>
+                </p>
+            </div>
+        </div>
+        <br>
+
+        <p style="text-align: center; font-weight: bolder;">Statement Tambahan Pada Looping</p>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Break</h3>
+                <p>digunakan untuk mengkontrol sebuah perulangan dengan menghentikan perulangan. </p>
+                <p>
+                    Contoh :
+                    <div class="code">
+                        for (let a = 1; a <= 5; a++) { <br>
+                            if (a == 3) { <br>
+                                break <br>
+                            } <br>
+                            a
+                        }
+                    </div>
+                    Output :
+                    <div class="hasil"  id="output_break"></div>
+                </p>
+            </div>
+            <div class="sub-kolom">
+                <h3>Continue</h3>
+                <p>digunakan untuk meloncati iterasi sekarang dan melanjutkan ke iterasi selanjutnya</p>
+                <p>
+                    Contoh :
+                    <div class="code">
+                        for (let a = 1; a <= 5; a++) { <br>
+                            if (a == 3) { <br>
+                                continue <br>
+                            } <br>
+                            a 
+                        }
+                    </div>
+                    Output :
+                    <div class="hasil"  id="output_continue"></div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="materi" id="pop_up">
+        <h2>Pop Up Box</h2>
+        <p>Javascript secara default memiliki tiga jenis popup box yaitu alert, prompt dan confirm.</p>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Alert</h3>
+                <p>
+                    Alert biasa digunakan unutk menampilkan pesan dan untuk mendapatkan perhatian dari pengguna. <br>
+                    Popup box jenis alert akan menampilkan pesan dengan sebuah tombol “OK”.
+                </p>
+                <br> <br> <br>
+                <div class="btn_pop_up">
+                    <button class="pop_up" onclick="coba_alert()"> coba </button>
+                </div>
+            </div>
+            <div class="sub-kolom">
+                <h3>Prompt</h3>
+                <p>
+                    Prompt sering digunakan jika kita ingin pengguna menginputkan sebuah nilai terlebih dahulu sebelum memasuki sebuah halaman. <br>
+                    Ketika prompt box tampil, pengguna harus klik “OK” atau “CANCEL” setelah memasukkan nilai. <br>
+                    Jika pengguna klik “OK” maka prompt akan mengembalikan nilai yang dimasukkan. 
+                    Jika pengguna klik “CANCEL” maka prompt akan mengembalikan nilai null.
+                </p>
+                <div class="btn_pop_up">
+                    <button class="pop_up" onclick="coba_prompt()"> coba </button>
+                </div> <br>
+                <div class="hasil" id="hasil_prompt"></div>
+            </div>
+        </div>
+        <div class="kolom">
+            <div class="sub-kolom">
+                <h3>Confirm</h3>
+                <p>
+                    Confirm digunakan untuk menampilkan pesan konfirmasi kepada pengguna. 
+                    Confirm box menampilkan pesan dengan dua buah tombol “OK” dan “CANCEL”. 
+                    Confirm mengembalikan nilai true jika kita tekan “OK” dan false jika kita tekan “CANCEL”.
+                </p>
+                <div class="btn_pop_up">
+                    <button class="pop_up" onclick="coba_confirm()"> coba </button>
+                </div> <br>
+                <div class="hasil" id="hasil_confirm"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#up">⬆️</a>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.style.backgroundColor = '#FFC374';
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+            }
+        });
+    </script>
+</body>
+</html>

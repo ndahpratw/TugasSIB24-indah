@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+
+    <!-- Eksternal CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        body{
+            background-color: #F9E897;
+        } .navbar{
+            background-color: #FFC374;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <img src="/assets/img/logo.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1> Form Pendaftaran </h1>
+    <form action="" method="post">
+
+        <div class="kolom">
+            <div>
+                <label for="nama">Nama</label><br>
+                <input type="text" name="nama" id="nama" placeholder="Nama Lengkap">
+            </div>
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Email Aktif">
+            </div>
+        </div>
+
+        <div class="kolom">
+            <div>
+                <label for="no_hp">Email</label><br>
+                <input type="number" name="no_hp" id="no_hp" placeholder="No. HP Aktif">
+            </div>
+            <div>
+                <label for="prodi">Program Studi</label>
+                <br>
+                <select name="prodi" id="prodi">
+                    <option value="" disabled selected> Pilih </option>
+                    <option value="Teknik Informatika"> Teknik Informatika </option>
+                    <option value="Teknik Industri"> Teknik Industri </option>
+                    <option value="Teknik Mesin"> Teknik Mesin </option>
+                    <option value="Teknik Elektro"> Teknik Elektro </option>
+                    <option value="Teknik Mekatronika"> Teknik Mekatronika </option>
+                    <option value="Sistem Informasi"> Sistem Informasi </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="kolom">
+            <div class="sub-kolom">
+                <label for="">Jenis Kelamin</label>
+                <br>
+                <div style="margin: 0px; padding: 0px;">
+                    <input type="radio" name="jenis_kelamin" id="laki-laki" value="laki-laki">
+                    <label for="laki-laki">laki-laki</label>
+                    <input type="radio" name="jenis_kelamin" id="perempuan" value="perempuan">
+                    <label for="perempuan">perempuan</label>
+                </div>
+                <br>
+        
+                <label for="">Hobi</label>
+                <br>
+                <div>
+                    <input type="checkbox" name="hobi" id="membaca" value="membaca">
+                    <label for="membaca">Membaca</label>
+                    <input type="checkbox" name="hobi" id="menulis" value="menulis">
+                    <label for="menulis">Menulis</label>
+                </div> <br>
+                <div>
+                    <input type="checkbox" name="hobi" id="menyanyi" value="menyanyi">
+                    <label for="menyanyi">Menyanyi</label>
+                    <input type="checkbox" name="hobi" id="olahraga" value="olahraga">
+                    <label for="olahraga">Olahraga</label>
+                </div>
+            </div>
+            <div>
+                <label for="alamat">Alamat : </label>
+                <br>
+                <textarea name="alamat" id="alamat" cols="28" rows="10"></textarea>
+                <br>
+            </div>
+        </div>
+
+        <div class="kolom">
+            <div>
+                <label for="foto_diri">Foto Diri</label>
+                <br>
+                <input type="file" name="foto_diri" id="foto_diri">
+            </div>
+            <div class="btn-daftar">
+                <input type="submit" value="Daftar">
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
