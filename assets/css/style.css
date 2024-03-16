@@ -411,7 +411,7 @@ input[type="submit"]:hover {
 
 @media (max-width : 425px) {
     .slide div img {
-        max-width: 100%;
+        max-width: 85%;
     }
     .notif {
         letter-spacing: 0px;
