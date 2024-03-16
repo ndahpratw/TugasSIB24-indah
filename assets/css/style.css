@@ -61,6 +61,9 @@ nav ul li a:hover {
     min-height: 85vh;
     position: relative;
 }
+.carousel input {
+    display: none;
+}
 .carousel-btn {
     position: absolute;
     z-index: 2;
@@ -139,6 +142,33 @@ nav ul li a:hover {
     font-family: "Madimi One", sans-serif;
     border: 2px solid #FFC374;
     background-color: #FFC374;
+}
+
+/* index - navigation */
+.navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: 475px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.manual-btn {
+    border: 2px solid #7F9F80;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child), .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #7F9F80;
+}
+.manual-btn:focus {
+    background: #7F9F80;
 }
 
 
@@ -318,6 +348,17 @@ input[type="submit"]:hover {
     transform: scale(1.2);
 }
 
+.notif {
+    width: 100%;
+    letter-spacing: 15px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width : 600px) {
     form {
         width: 45%;
@@ -334,9 +375,12 @@ input[type="submit"]:hover {
     textarea {
         width: 240px;
     }
+    .notif {
+        letter-spacing: 5px;
+    }
 }
 @media (max-width : 725px) {
-    .slide img {
+    .slide div img {
         max-width: 425px;
     }
     .bab {
@@ -362,6 +406,15 @@ input[type="submit"]:hover {
     #logika-1, #logika-2,
     #bitwise-1, #bitwise-2 {
         width: 85px;
+    }
+}
+
+@media (max-width : 425px) {
+    .slide div img {
+        max-width: 100%;
+    }
+    .notif {
+        letter-spacing: 0px;
     }
 }
 

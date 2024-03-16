@@ -6,10 +6,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Madimi+One&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Home - P6</title>
+    <title>Home - P7</title>
+
 
     <!-- Ekternal CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .slide {
+            height: 70vh;
+        }
+    </style>
+
 </head>
 <body>
     <div class="container">
@@ -17,13 +24,16 @@
             <img src="assets/img/logo.png" alt="logo">
         </nav>
         
-        <h3 class="notif"> !!! Tugas 7 Berada di Slide Ke Empat !!! </h3>
-
         <div class="carousel" data-carousel>
             <button class="carousel-btn prev" data-carousel-button="prev">&#10094;</button>
             <button class="carousel-btn next" data-carousel-button="next">&#10095;</button>
+            
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
             <div class="content" data-slides>
-                <div class="slide" data-active>
+                <div class="slide first" data-active>
                     <div>
                         <img src="assets/img/thumbnail.jpg" alt="JavaScript">
                         <br> <br>
@@ -44,23 +54,18 @@
                     </div>
                     <a href="form.html">Daftar Sekarang</a>
                 </div>
-                <div class="slide">
-                    <a href="landingdom.html">Landing Page P7</a>
-                </div>
+            </div>
+
+            <!-- navigation -->
+            <div class="navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
             </div>
         </div>
     </div>
 
-    <script>
-        setInterval(() => {
-            document.querySelector('.notif').style.display = 'block';
-        setTimeout(() => {
-            document.querySelector('.notif').style.display = 'none';
-        }, 1000);
-        }, 2500); 
-    </script>
-
     <!-- Eksternal JS -->
-    <script src="assets/js/carousel.js" defer></script>
+    <script src="assets/js/carousel_dom.js" defer></script>
 </body>
 </html>
