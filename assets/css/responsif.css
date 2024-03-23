@@ -102,7 +102,7 @@ input {
 @media (max-width : 576px) {
     .login {
         flex-wrap: wrap;
-        margin: 20px 0px;
+        margin: 50px 0px;
     }
     .left-konten img {
         width: 150px;
