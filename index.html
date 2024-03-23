@@ -10,14 +10,64 @@
 
     <!-- Ekternal CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- STYLE UNTUK BAGIAN PENUGASAN -->
+    <style>
+        body {
+            min-height: fit-content;
+            background-color: #FFC374;
+        }
+        .penugasan {
+            margin: 15px 20px 50px;
+        }
+        .tugas {
+            margin: 10px auto;
+            width: 75%;
+            border-radius: 15px;
+            padding: 25px;
+            background-color: #F9E897;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .tugas a {
+            margin: 0px auto;
+            z-index: 3;
+            text-decoration: none;
+            color: #151515;
+            border: 1px solid #151515;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 150px;
+        }
+        .tugas a:hover {
+            font-family: "Madimi One", sans-serif;
+            border: 2px solid #FFC374;
+            background-color: #FFC374;
+        }
+        .tugas p, .tugas h4 {
+            margin: 10px 0px 5px;
+            font-family: "Madimi One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: x-large;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <nav>
             <img src="assets/img/logo.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="#penugasan"> PENUGASAN </a>
+                </li>
+            </ul>
         </nav>
         
-        <h3 class="notif"> !!! Tugas 9 Berada di Slide Ke Enam !!! </h3>
+        <h3 class="notif"> Mohon  Discrool Untuk Melihat Penugasan Lainnya </h3>
 
         <div class="carousel" data-carousel>
             <button class="carousel-btn prev" data-carousel-button="prev">&#10094;</button>
@@ -44,29 +94,35 @@
                     </div>
                     <a target="_blank" href="form.html">Daftar Sekarang</a>
                 </div>
-                <div class="slide">
-                    <div>
-                        <h4> " JavaScript Dom " </h4>
-                    </div>
+            </div>
+        </div>
+
+        <h1> Penugasan </h1>
+        <div class="penugasan" id="penugasan">
+            <div class="tugas">
+                <div>
+                    <h4> JavaScript DOM </h4>
+                </div>
+                <div>
                     <a target="_blank" href="landingdom.html">Landing Page P7</a>
                 </div>
-                <div class="slide">
-                    <div>
-                        <h4> " JavaScript Async, JavaScript Promise, JavaScript Fetch " </h4>
-                    </div>
-                    <div>
-                        <a target="_blank" href="productapi.html">productapi.html</a>
-                        <a target="_blank" href="productarray.html">productarray.html</a>
-                    </div>
+            </div>
+            <div class="tugas">
+                <div>
+                    <h4> " JavaScript Async, JavaScript Promise, JavaScript Fetch " </h4>
                 </div>
-                <div class="slide">
-                    <div>
-                        <h4> " Web Design - Web Layout dan Responsive Design " </h4>
-                    </div>
-                    <div>
-                        <a target="_blank" href="login-responsive.html">login-responsive.html</a>
-                        <a target="_blank" href="product-responsive.html">product-responsive.html</a>
-                    </div>
+                <div>
+                    <a target="_blank" href="productapi.html">productapi.html</a>
+                    <a target="_blank" href="productarray.html">productarray.html</a>
+                </div>
+            </div>
+            <div class="tugas">
+                <div>
+                    <h4> " Web Design - Web Layout dan Responsive Design " </h4>
+                </div>
+                <div>
+                    <a target="_blank" href="login-responsive.html">login-responsive.html</a>
+                    <a target="_blank" href="product-responsive.html">product-responsive.html</a>
                 </div>
             </div>
         </div>
