@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid black; */
+}
+
+h1 {
+    text-align: center;
+    color: #7F9F80;
+}
+
+hr {
+    border: 2px solid #7F9F80;
+    margin: 10px 0px;
+}
+
+/* STYLE UNTUK LOGIN-RESPONSIVE */
+.container {
+    min-height: 100vh;
+    background-color: #FFC374;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 65%;
+    padding: 25px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.left-konten, .right-konten {
+    margin: 0px 15px;
+}
+
+.left-konten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding: 15px;
+}
+.right-konten {
+    width: 45%;
+    padding: 25px;
+}
+
+.left-konten img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+label {
+    font-size: larger;
+    font-weight: bold;
+    color: #7F9F80;
+}
+
+input {
+    width: 95%;
+    margin: 7px 0px 0px;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.remember-me {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remember-me input {
+    margin: 0px;
+}
+
+.remember-me label {
+    width: 500px;
+    color: black;
+    font-size: medium;
+    font-weight: 100;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button input {
+    width: 50%;
+    background-color: white;
+}
+.button input:hover {
+    background-color: #7F9F80;
+    border: 2px solid #7F9F80;
+    color: white;
+}
+
+@media (max-width : 576px) {
+    .login {
+        flex-wrap: wrap;
+        margin: 20px 0px;
+    }
+    .left-konten img {
+        width: 150px;
+    }
+    .left-konten, .right-konten {
+        padding: 0px;
+        margin: 10px 15px;
+        width: 100%;
+    }
+    input {
+        padding: 5px;
+        margin: 5px 0px 0px;
+    }
+    label {
+        font-size: medium;
+    }
+}
+
+@media (max-width : 768px) {
+    .login {
+        /* flex-wrap: wrap; */
+        margin: 20px 0px;
+    }
+    .left-konten img {
+        width: 175px;
+    }
+    .left-konten, .right-konten {
+        padding: 0px;
+        margin: 10px 15px;
+        width: 100%;
+    }
+}
