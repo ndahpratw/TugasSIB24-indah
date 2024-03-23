@@ -30,8 +30,11 @@ nav h2 {
 
 /* STYLE UNTUK PRODUCTAPI */
 .container {
-    padding: 50px 20px;
     background-color: #222831;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .konten {
     display: grid;
