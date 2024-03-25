@@ -1,4 +1,4 @@
-let endpoint = 'https://crudcrud.com/api/9cb8ea479d064af398b6763caae3bfee/product/';
+let endpoint = 'https://crudcrud.com/api/b22d26b55b134b0ea60463f2ddaa6365/product/';
 
 // menampilkan data di tabel
 fetch(endpoint)
